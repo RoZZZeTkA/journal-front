@@ -1,0 +1,32 @@
+  <div>
+    <form #addUserForm = "ngForm" (ngSubmit) = "addUser(addUserForm)">
+      <p>
+        <label>First Name</label>
+        <input type="text" name="firstName" placeholder="First Name" ngModel>
+      </p>
+      <p>
+        <label>Second Name</label>
+        <input type="text" name="secondName" placeholder="Second Name" ngModel>
+      </p>
+      <p>
+        <label>Login</label>
+        <input type="text" name="login" placeholder="Login" ngModel>
+      </p>
+      <p>
+        <label>Password</label>
+        <input type="text" name="password" placeholder="Password" ngModel>
+      </p>
+      <p>
+        <label>Role</label>
+        <select name="role" ngModel>
+            <option>STUDENT</option>
+            <option>TEACHER</option>
+            <option>ADMIN</option>
+        </select>
+      </p>
+      <button type="submit">Add</button>
+    </form>
+  </div>
+<div *ngFor="let user of users">
+    <div>{{user.firstName}}</div>
+</div>

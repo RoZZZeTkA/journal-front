@@ -1,0 +1,87 @@
+<p>
+    {{user.firstName}} {{user.secondName}} 
+</p>
+<div id="subjects">
+    <div *ngFor="let subject of userSubjects">{{subject.name}}</div>
+    <form #addSubjectForm = "ngForm" (ngSubmit) = "addSubjectToUser(addSubjectForm)">
+        <p id="subjectIdP">
+            Subject
+            <input type="text" name="id" placeholder="id" ngModel>
+        </p>
+        <p>
+            Subject
+            <select id="subjectSelect">
+                <option *ngFor="let subject of subjects">{{subject.name}}</option>
+            </select>
+        </p>
+        <button type="submit">Set</button>
+    </form>
+</div>
+<div id="group">
+    Group
+    {{groupName}}
+    <form #setGroupForm = "ngForm" (ngSubmit) = "setGroup(setGroupForm)">
+        <p id="userIdP">
+            User id
+            <input type="text" name="id" placeholder="user id" ngModel>
+        </p>
+        <p id="groupIdP">
+            Group
+            <input type="text" name="groupId" placeholder="id" ngModel>
+        </p>
+        <p>
+            Group
+            <select id="groupSelect">
+                <option *ngFor="let group of groups">{{group.name}}</option>
+            </select>
+        </p>
+        <button type="submit">Set</button>
+    </form>
+</div>
+<div id="schedule">
+    <b>Schedule</b>
+    <div class="day">
+        Monday
+        <div *ngFor="let clazzView of monday">{{clazzView.subjectName}}
+                                              {{clazzView.groupName}}
+                                              {{clazzView.teacherName}}
+                                              {{clazzView.classroomName}}
+        {{clazzView.startTimeHour}}:{{clazzView.startTimeMinute}}-{{clazzView.endTimeHour}}:{{clazzView.endTimeMinute}}</div>
+    </div>
+    <div class="day">
+        Tuesday
+        <div *ngFor="let clazzView of tuesday">{{clazzView.subjectName}}
+                                              {{clazzView.groupName}}
+                                              {{clazzView.teacherName}}
+                                              {{clazzView.classroomName}}
+        {{clazzView.startTimeHour}}:{{clazzView.startTimeMinute}}-{{clazzView.endTimeHour}}:{{clazzView.endTimeMinute}}</div>
+    </div>
+    <div class="day">
+        Wednesday
+        <div *ngFor="let clazzView of wednesday">{{clazzView.subjectName}}
+                                              {{clazzView.groupName}}
+                                              {{clazzView.teacherName}}
+                                              {{clazzView.classroomName}}
+        {{clazzView.startTimeHour}}:{{clazzView.startTimeMinute}}-{{clazzView.endTimeHour}}:{{clazzView.endTimeMinute}}</div>
+    </div>
+    <div class="day">
+        Thursday
+        <div *ngFor="let clazzView of thursday">{{clazzView.subjectName}}
+                                              {{clazzView.groupName}}
+                                              {{clazzView.teacherName}}
+                                              {{clazzView.classroomName}}
+        {{clazzView.startTimeHour}}:{{clazzView.startTimeMinute}}-{{clazzView.endTimeHour}}:{{clazzView.endTimeMinute}}</div>
+    </div>
+    <div class="day">
+        Thursday
+        <div *ngFor="let clazzView of thursday">{{clazzView.subjectName}}
+                                              {{clazzView.groupName}}
+                                              {{clazzView.teacherName}}
+                                              {{clazzView.classroomName}}
+        {{clazzView.startTimeHour}}:{{clazzView.startTimeMinute}}-{{clazzView.endTimeHour}}:{{clazzView.endTimeMinute}}</div>
+    </div>
+</div>
+<div id="marks">
+    <b>Marks</b>
+    <div *ngFor="let markView of marks">{{markView.subjectName}} {{markView.markDate}} {{markView.value}}</div>
+</div>

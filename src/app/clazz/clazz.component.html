@@ -1,0 +1,93 @@
+<form #addClassForm = "ngForm" (ngSubmit) = "addClass(addClassForm)">
+    <p id="subjectIdP">
+      <label>Subject</label>
+      <input type="text" name="subjectId" ngModel>
+    </p>
+    <p id="groupIdP">
+      <label>Group</label>
+      <input type="text" name="groupId" ngModel>
+    </p>
+    <p id="teacherIdP">
+      <label>Teacher</label>
+      <input type="text" name="teacherId" ngModel>
+    </p>
+    <p id="classroomIdP">
+      <label>Classroom</label>
+      <input type="text" name="classroomId" ngModel>
+    </p>
+    <p id="dayNumberP">
+        <label>Day</label>
+        <input type="text" name="dayNumber" ngModel>
+      </p>
+      <p id="startTimeHourP">
+        <label>Start</label>
+        <input type="text" name="startTimeHour" ngModel>
+      </p>
+      <p id="startTimeMinuteP">
+        <label>Start</label>
+        <input type="text" name="startTimeMinute" ngModel>
+      </p>
+      <p id="endTimeHourP">
+        <label>End</label>
+        <input type="text" name="endTimeHour" ngModel>
+      </p>
+      <p id="endTimeMinuteP">
+        <label>End</label>
+        <input type="text" name="endTimeMinute" ngModel>
+      </p>
+      <p>
+          Subject
+          <select id="subjectSelect">
+              <option *ngFor="let subject of subjects">{{subject.name}}</option>
+          </select>
+      </p>
+      <p>
+          Group
+          <select id="groupSelect">
+            <option *ngFor="let group of groups">{{group.name}}</option>
+          </select>
+      </p>
+      <p>
+          Teacher
+          <select id="teacherSelect">
+            <option *ngFor="let teacher of teachers">{{teacher.firstName}}&nbsp;{{teacher.secondName}}</option>
+          </select>
+      </p>
+      <p>
+          Classroom
+          <select id="classroomSelect">
+            <option *ngFor="let classroom of classrooms">{{classroom.name}}</option>
+          </select>
+      </p>
+      <p>
+          Day
+          <select id="daySelect">
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+          </select>
+      </p>
+      <p>
+          Start
+          <select id="startTimeHourSelect">
+              <option *ngFor="let hour of startHours">{{hour}}</option>
+          </select>
+          :
+          <select id="startTimeMinuteSelect">
+            <option *ngFor="let minute of startMinutes">{{minute}}</option>
+        </select>
+      </p>
+      <p>
+        End
+        <select id="endTimeHourSelect">
+            <option *ngFor="let hour of endHours">{{hour}}</option>
+        </select>
+        :
+        <select id="endTimeMinuteSelect">
+          <option *ngFor="let minute of endMinutes">{{minute}}</option>
+      </select>
+    </p>
+    <button type="submit">Add</button>
+  </form>

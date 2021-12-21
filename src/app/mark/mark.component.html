@@ -1,0 +1,36 @@
+<form #addMarkForm = "ngForm" (ngSubmit) = "addMark(addMarkForm)">
+    <p id="studentIdP">
+        <label>Student</label>
+        <input type="text" name="studentId" placeholder="Student" ngModel>
+    </p>
+    <p id="subjectIdP">
+        <label>Subject</label>
+        <input type="text" name="subjectId" placeholder="Subject" ngModel>
+    </p>
+    <p>
+        <label>Student</label>
+        <select id="studentSelect">
+            <option *ngFor="let student of students">{{student.firstName}}&nbsp;{{student.secondName}}</option>
+        </select>
+    </p>
+    <p>
+        Subject
+        <select id="subjectSelect">
+            <option *ngFor="let subject of subjects">{{subject.name}}</option>
+        </select>
+    </p>
+    <p>
+        <label>Value</label>
+        <select name = "value" ngModel>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </p>
+    <!-- <p>
+        Date
+        <input type="date">
+    </p> -->
+    <button type="submit">Add</button>
+</form>

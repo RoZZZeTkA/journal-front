@@ -1,0 +1,4 @@
+#subjectIdP, #groupIdP, #teacherIdP, #classroomIdP, #dayNumberP, 
+#startTimeHourP, #startTimeMinuteP, #endTimeHourP, #endTimeMinuteP {
+    display: none;
+}
