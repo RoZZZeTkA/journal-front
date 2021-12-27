@@ -17,6 +17,10 @@ export class GroupService {
     return this.http.get<Group[]>(`${this.apiServerUrl}/group/all`, {headers});
   }
 
+  public getGroupById(headers, id: number): Observable<Group> {
+    return this.http.get<Group>(`${this.apiServerUrl}/group/find/${id}`, {headers});
+  }
+
   public addGroup(headers, group: Group): Observable<Group> {
     return this.http.post<Group>(`${this.apiServerUrl}/group/add`, group, {headers});
   }

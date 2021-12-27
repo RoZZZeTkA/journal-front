@@ -20,4 +20,8 @@ export class ClazzService {
   public getSchedule(headers, userId: number): Observable<Clazz[]> {
     return this.http.get<Clazz[]>(`${this.apiServerUrl}/class/schedule/${userId}`, {headers});
   }
+
+  public getScheduleByGroup(headers, groupId: number): Observable<Clazz[]> {
+    return this.http.get<Clazz[]>(`${this.apiServerUrl}/class/scheduleByGroup/${groupId}`, {headers});
+  }
 }

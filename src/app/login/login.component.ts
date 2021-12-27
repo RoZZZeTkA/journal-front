@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
     this.loginService.login(loginForm.value).subscribe(
       (response) => {
         localStorage.setItem("token", "Bearer " + response.accessToken);
-        // this.router.navigate(["/"]);
+        this.router.navigate([`/schedule`]);
       }
     );
   }

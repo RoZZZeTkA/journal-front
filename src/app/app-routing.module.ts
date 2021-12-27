@@ -5,6 +5,8 @@ import { ClazzComponent } from './clazz/clazz.component';
 import { GroupComponent } from './group/group.component';
 import { LoginComponent } from './login/login.component';
 import { MarkComponent } from './mark/mark.component';
+import { ScheduleGroupComponent } from './schedule-group/schedule-group.component';
+import { ScheduleTeacherComponent } from './schedule-teacher/schedule-teacher.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { SubjectComponent } from './subject/subject.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: 'user/add', component:UserComponent},
   {path: 'class/add', component:ClazzComponent},
   {path: 'user/id/:id', component:UserProfileComponent},
-  {path: 'schedule/:id', component:ScheduleComponent}
+  {path: 'schedule', component:ScheduleComponent},
+  {path: 'schedule/group/:id', component:ScheduleGroupComponent},
+  {path: 'schedule/teacher/:id', component:ScheduleTeacherComponent}
 ];
 
 @NgModule({

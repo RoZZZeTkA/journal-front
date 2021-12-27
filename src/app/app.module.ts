@@ -14,6 +14,8 @@ import { UserComponent } from './user/user.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ClazzComponent } from './clazz/clazz.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { ScheduleGroupComponent } from './schedule-group/schedule-group.component';
+import { ScheduleTeacherComponent } from './schedule-teacher/schedule-teacher.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ScheduleComponent } from './schedule/schedule.component';
     UserComponent,
     UserProfileComponent,
     ClazzComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    ScheduleGroupComponent,
+    ScheduleTeacherComponent
   ],
   imports: [
     BrowserModule,

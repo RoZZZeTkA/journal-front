@@ -1,1 +1,12 @@
-<p>schedule works!</p>
+<b>Groups</b>
+<div *ngFor="let group of groups">
+    <a href="{{frontServerUrl}}/schedule/group/{{group.id}}">
+        {{group.name}}
+    </a>
+</div>
+<b>Teachers</b>
+<div *ngFor="let teacher of teachers">
+    <a href="{{frontServerUrl}}/schedule/teacher/{{teacher.id}}">
+        {{teacher.firstName}}&nbsp;{{teacher.secondName}}
+    </a>
+</div>

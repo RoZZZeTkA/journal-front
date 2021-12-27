@@ -144,13 +144,6 @@ export class UserProfileComponent implements OnInit {
                 }
               }
             )
-            this.groups.forEach(
-              (group) => {
-                if (group.id == clazz.groupId) {
-                  clazzView.groupName = group.name;
-                }
-              }
-            )
             this.teachers.forEach(
               (teacher) => {
                 if (teacher.id == clazz.teacherId) {
